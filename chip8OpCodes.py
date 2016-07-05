@@ -62,5 +62,5 @@ ignore = ""
 def genCode(tree):
     return opCodes[tree][0]
 
-decodeTree = getDecodeTree(opCodes, wildCard, ignore)
+decodeTree = getDecodeTree(opCodes.keys(), wildCard, ignore)
 print getSwitch(genCode, "/*Default*/", decodeTree, 0, base=16)
